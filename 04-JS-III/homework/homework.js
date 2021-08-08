@@ -87,8 +87,8 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var resultado;
-  for (i=0;i<numeros.length;i++) {
+  let resultado = 0;
+  for (let i=0;i<numeros.length;i++) {
     resultado += numeros[i];
   }
   return resultado
@@ -99,8 +99,8 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una lista de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  let sumResultados;
-  for (i=0;i<resultadosTest.length;i++) {
+  let sumResultados = 0;
+  for (let i=0; i < resultadosTest.length; i++) {
     sumResultados += resultadoTest[i];
   }
   let promedio = sumResultados / resultadosTest.length;
