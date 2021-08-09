@@ -211,6 +211,17 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var mesesPedidos = [];
+  
+  for (let i=0;i<array.length;i++) {
+    if (array[i] === "Marzo"|| array[i] === "Noviembre" || array[i] === "Enero") {
+      mesesPedidos.push(array[i]);
+    };
+  };
+  if (mesesPedidos.length !== 3) {
+    return "No se encontraron los meses pedidos";
+  };
+  return mesesPedidos;
 }
 
 
@@ -218,6 +229,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var masDeCien = [];
+  
+  for (let i=0;i<array.length;i++) {
+    if (array[i] > 100) {
+      masDeCien.push(array[i]);
+    }
+  }
+  return masDeCien;
 }
 
 
@@ -229,8 +248,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-}
+  var numeroIterante = 0;
+  var arrayTwoIncrease = [];
 
+  for (i=1;i<=10;i++) {
+    var numTwoIncrease = numero + 2;
+    numeroIterante = numTwoIncrease;
+    if (numTwoIncrease === i) {
+      break;
+    }
+    else {
+      arrayTwoIncrease.push(numTwoIncrease);
+    };    
+  };
+  return arrayTwoIncrease;
+}
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
