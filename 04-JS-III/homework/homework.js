@@ -248,20 +248,24 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var numeroIterante = 0;
-  var arrayTwoIncrease = [];
+  var numeroMasDos = [numero+2];
+  var i = 1;
+  var b;
 
-  for (i=1;i<=10;i++) {
-    var numTwoIncrease = numero + 2;
-    numeroIterante = numTwoIncrease;
-    if (numTwoIncrease === i) {
-      break;
-    }
-    else {
-      arrayTwoIncrease.push(numTwoIncrease);
-    };    
+  if (numero > 0) {
+    while (numeroMasDos.length < 10) {
+      numeroMasDos.push(numeroMasDos[i-1] + 2);
+      if (i === numeroMasDos[i]) {
+        b = true;
+        break;
+      };
+      i++;
+    };
+    };
+  if (b === true || numero < 0) {
+    return "Se interrumpió la ejecución";
   };
-  return arrayTwoIncrease;
+  return numeroMasDos;
 }
 
 function continueStatement(numero) {
@@ -271,8 +275,27 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-}
+  var saltoElCinco = [];
+  var lastNumber = numero;
 
+  for (let i = 1;i < 11;i++) {
+    if (i === 5) continue;
+    else {saltoElCinco.push(lastNumber += 2)};
+    }
+  return saltoElCinco;
+};
+  
+/*var array = [];  //Solución dada
+var suma = numero;
+for(var i= 0; i<10; i++) {
+  if(i === 5) continue;
+  else {
+    suma = suma + 2;
+    array.push(suma);
+  }
+}
+return array;
+};*/
 
 // No modificar nada debajo de esta línea
 // --------------------------------
